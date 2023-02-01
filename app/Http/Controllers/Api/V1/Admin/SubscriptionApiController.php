@@ -41,7 +41,7 @@ class SubscriptionApiController extends Controller
         $email = $request->email;
         $name = $request->name;
         $subject = 'Your guide on Money Revamp Roadmap';
-        $file = public_path() . '/docs/Money-Revamp-Roadmap-Final.pdf';
+        $file = public_path() . '/docs/Money-Revamp-Figuring-Finance.pdf';
 
         Mail::to($email)->send(new SendGuide($subject, $name, $file));
         // if response successful, return success message 
