@@ -72,7 +72,7 @@
                 @endcan
                 @can('contact_us_access')
                     <li class="items-center">
-                        <a class="{{ request()->is("admin/contact-uss*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.contact-uss.index") }}">
+                        <a class="{{ request()->is("admin/contactuses*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.contactuses.index") }}">
                             <i class="fa-fw c-sidebar-nav-icon fas fa-envelope">
                             </i>
                             {{ trans('cruds.contactUs.title') }}
