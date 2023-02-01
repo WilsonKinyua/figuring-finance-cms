@@ -23,12 +23,13 @@ class SubscriptionApiController extends Controller
 
     public function store(Request $request)
     {
-        // check if email already exists
+        // $request->request->add(['_token' => csrf_token()]);    
+
         $email = $request->email;
         $subscription = Subscription::where('email', $email)->first();
         if ($subscription) {
             return response()->json([
-                'message' => 'Email already exists. Check your inbox for the guide.',
+                'message' => 'Email already exists. Check your inbox for a guide that was sent on ' . Carbon::parse($subscription->created_at)->format('d M Y') . '.'
             ], 400);
         }
 
