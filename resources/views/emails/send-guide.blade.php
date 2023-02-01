@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h3>'Hi '{{ $name }},</h3>
+    <h3>Hi {{ $name }},</h3>
     <p>
         Thank you for subscribing to Money Revamp Roadmap. The aim of this roadmap
         is to help you gain financial knowledge, handle your money better and win all-round with your money! Take
