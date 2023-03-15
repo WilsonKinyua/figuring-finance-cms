@@ -72,10 +72,19 @@
                 @endcan
                 @can('contact_us_access')
                     <li class="items-center">
-                        <a class="{{ request()->is("admin/contactuses*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.contactuses.index") }}">
+                        <a class="{{ request()->is("admin/contact-uss*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.contact-uss.index") }}">
                             <i class="fa-fw c-sidebar-nav-icon fas fa-envelope">
                             </i>
                             {{ trans('cruds.contactUs.title') }}
+                        </a>
+                    </li>
+                @endcan
+                @can('enrollment_access')
+                    <li class="items-center">
+                        <a class="{{ request()->is("admin/enrollments*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.enrollments.index") }}">
+                            <i class="fa-fw c-sidebar-nav-icon fas fa-pen-fancy">
+                            </i>
+                            {{ trans('cruds.enrollment.title') }}
                         </a>
                     </li>
                 @endcan

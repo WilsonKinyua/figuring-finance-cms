@@ -162,6 +162,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 38,
                 'title' => 'contact_us_access',
             ],
+            [
+                'id'    => 39,
+                'title' => 'enrollment_create',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'enrollment_edit',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'enrollment_show',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'enrollment_delete',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'enrollment_access',
+            ],
         ];
 
         Permission::insert($permissions);

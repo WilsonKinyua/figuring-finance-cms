@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArticleCategoryController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\EnrollmentController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
@@ -46,7 +47,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'v
     Route::resource('article-categories', ArticleCategoryController::class, ['except' => ['store', 'update', 'destroy']]);
 
     // Contact Us
-    Route::resource('contactuses', ContactUsController::class, ['except' => ['store', 'update', 'destroy', 'create', 'edit']]);
+    Route::resource('contact-uss', ContactUsController::class, ['except' => ['store', 'update', 'destroy', 'create', 'edit']]);
+
+    // Enrollment
+    Route::resource('enrollments', EnrollmentController::class, ['except' => ['store', 'update', 'destroy']]);
 });
 
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'middleware' => ['auth']], function () {

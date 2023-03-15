@@ -173,4 +173,25 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+    'enrollment' => [
+        'title'          => 'Enrollment',
+        'title_singular' => 'Enrollment',
+        'fields'         => [
+            'id'                  => 'ID',
+            'id_helper'           => ' ',
+            'module'              => 'Module',
+            'module_helper'       => ' ',
+            'email'               => 'Email',
+            'email_helper'        => ' ',
+            'phone_number'        => 'Phone Number',
+            'phone_number_helper' => ' ',
+            'created_at'          => 'Created at',
+            'created_at_helper'   => ' ',
+            'updated_at'          => 'Updated at',
+            'updated_at_helper'   => ' ',
+            'deleted_at'          => 'Deleted at',
+            'deleted_at_helper'   => ' ',
+        ],
+    ],
+
 ];

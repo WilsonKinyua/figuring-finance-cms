@@ -62,13 +62,13 @@
                             </a>
                         @endif
                     </div>
-                    <div class="w-1/2 text-right">
+                    {{-- <div class="w-1/2 text-right">
                         @if(Route::has('register'))
                             <a href="{{ route('register') }}" class="text-blueGray-200">
                                 <small>{{ __('global.register') }}</small>
                             </a>
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
