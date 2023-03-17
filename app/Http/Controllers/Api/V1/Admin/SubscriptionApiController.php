@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Admin\SubscriptionResource;
+use App\Mail\FiguringFinanceMail;
 use App\Mail\SendGuide;
 use App\Models\Subscription;
 use Carbon\Carbon;
@@ -44,7 +45,9 @@ class SubscriptionApiController extends Controller
         $subject = 'Your guide on Money Revamp Roadmap';
         $file = public_path() . '/docs/Money-Revamp-Figuring-Finance.pdf';
 
-        Mail::to($email)->send(new SendGuide($subject, $name, $file));
+        Mail::to($email)->send(new SendGuide($subject, $name, $file)); // send email on subscription
+        $emailMessage = "A new subscriber has subscribed to Your guide on Money Revamp Roadmap on Figuring Finance website. Subscriber's email is " . $email . ". Subscriber's name is " . $name . ".";
+        Mail::to('wilsonkinyuam@gmail.com')->send(new FiguringFinanceMail($emailMessage));
         // if response successful, return success message 
         return response()->json([
             'message' => 'Email sent successfully. Check your inbox for the guide.',
