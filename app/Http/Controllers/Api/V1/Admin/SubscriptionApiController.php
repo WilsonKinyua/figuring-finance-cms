@@ -47,7 +47,7 @@ class SubscriptionApiController extends Controller
 
         Mail::to($email)->send(new SendGuide($subject, $name, $file)); // send email on subscription
         $emailMessage = "A new subscriber has subscribed to Your guide on Money Revamp Roadmap on Figuring Finance website. Subscriber's email is " . $email . ". Subscriber's name is " . $name . ".";
-        Mail::to('wilsonkinyuam@gmail.com')->send(new FiguringFinanceMail($emailMessage));
+        Mail::to('hello@figuring-finance.com')->send(new FiguringFinanceMail($emailMessage));
         // if response successful, return success message 
         return response()->json([
             'message' => 'Email sent successfully. Check your inbox for the guide.',
